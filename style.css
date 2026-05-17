@@ -741,7 +741,7 @@ nav.scrolled .hamburger span { background: var(--text); }
     left: 0; right: 0;
     background: var(--white);
     flex-direction: column;
-    padding: 8px 0 24px;
+    padding: 12px 0 32px;
     gap: 0;
     border-top: 1px solid var(--border);
     box-shadow: 0 12px 32px rgba(0,0,0,.12);
@@ -749,20 +749,27 @@ nav.scrolled .hamburger span { background: var(--text); }
     z-index: 999;
   }
   .nav-links.open { display: flex; }
+  .nav-links li { padding: 0 32px; }
   .nav-links a {
-    padding: 16px 28px;
+    display: block;
+    padding: 18px 0;
     color: var(--text) !important;
-    font-size: 15px;
-    letter-spacing: .04em;
+    font-size: 16px;
+    letter-spacing: .06em;
     border-bottom: 1px solid var(--border);
   }
-  .nav-links a:last-child { border-bottom: none; }
+  .nav-links li:last-child a { border-bottom: none; }
   .nav-links a.btn-reserve {
-    margin: 16px 28px 0;
-    padding: 12px 20px;
+    display: block;
+    margin: 20px 0 0;
+    padding: 16px;
     text-align: center;
     border-bottom: none;
     border-radius: 2px;
+    background: var(--accent);
+    color: var(--white) !important;
+    font-size: 14px;
+    letter-spacing: .12em;
   }
 
   .about-grid,
