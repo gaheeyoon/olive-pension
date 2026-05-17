@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오시는 길 & 주변 관광지 — 올리브 펜션</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attract-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .attract-card {
+      background: var(--white);
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .attract-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.1);
+    }
+    .attract-card-img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+    }
+    .attract-card-body { padding: 20px 22px; }
+    .attract-card-dist {
+      font-size: 11px;
+      letter-spacing: .15em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .attract-card-name {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .attract-card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .attract-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ────────────────── -->
+<nav id="navbar" class="scrolled">
+  <a href="index.html" class="nav-logo">OLIVE PENSION</a>
+  <ul class="nav-links">
+    <li><a href="index.html">펜션 소개</a></li>
+    <li><a href="rooms.html">객실 안내</a></li>
+    <li><a href="info.html">이용 안내</a></li>
+    <li><a href="contact.html" class="active">오시는 길</a></li>
+    <li><a href="info.html#reservation" class="btn-reserve">예약하기</a></li>
+  </ul>
+</nav>
+
+<!-- ── Page Banner ───────────────── -->
+<div class="page-banner" style="margin-top: var(--nav-h);">
+  <img class="page-banner-img" src="images/exterior1.jpg" alt="올리브 펜션">
+  <div class="page-banner-overlay"></div>
+  <div class="page-banner-text">
+    <span class="section-label">Location &amp; Attractions</span>
+    <h1>오시는 길</h1>
+  </div>
+</div>
+
+<!-- ── Contact & Map ─────────────── -->
+<section style="background: var(--white);">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-label">Find Us</span>
+        <h2 class="section-title">올리브 펜션으로<br><em>오시는 방법</em></h2>
+        <div class="section-divider"></div>
+
+        <div class="contact-item">
+          <span class="contact-label">Address</span>
+          <p class="contact-value">강원도 속초시 설악동</p>
+          <p class="contact-sub">척산온천 인근 · 설악산 자락</p>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <p class="contact-value">전화 문의</p>
+          <p class="contact-sub">예약 및 문의는 전화 또는 온라인으로 해주세요</p>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">자가용 이용 시</span>
+          <p class="contact-sub" style="font-size:14px; line-height:1.9;">
+            서울 → 양양고속도로 → 속초IC → 설악산 방면<br>
+            척산온천 방향으로 약 1.4km
+          </p>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">대중교통 이용 시</span>
+          <p class="contact-sub" style="font-size:14px; line-height:1.9;">
+            속초 버스터미널 하차 → 시내버스 이용<br>
+            속초역(KTX) 하차 → 택시 또는 버스 이용
+          </p>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">주변 이정표</span>
+          <p class="contact-sub" style="font-size:14px; line-height:1.9;">
+            척산온천휴양촌 약 1.4km<br>
+            설악산 소공원 약 5.9km<br>
+            속초해수욕장 약 6.5km<br>
+            속초시내 약 8km
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-wrap" style="aspect-ratio: unset; height: 460px;">
+          <!-- 카카오맵 또는 네이버맵 embed 자리 -->
+          <iframe
+            src="https://map.kakao.com/link/map/올리브펜션,38.1395,128.5900/embed"
+            style="width:100%;height:100%;border:0;"
+            allowfullscreen
+            loading="lazy"
+            title="올리브 펜션 위치"
+          ></iframe>
+        </div>
+        <p style="font-size:12px; color:var(--text-muted); margin-top:10px; text-align:right;">
+          ※ 정확한 주소는 예약 확정 후 안내드립니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Nearby Attractions ─────────── -->
+<section>
+  <div class="container">
+    <span class="section-label">Nearby Attractions</span>
+    <h2 class="section-title">설악·속초 주변<br><em>추천 관광지</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-text">올리브 펜션 주변에는 속초와 설악산의 매력적인 명소들이 가득합니다. 자연, 문화, 미식을 모두 즐겨보세요.</p>
+
+    <div class="attract-list">
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/exterior4.jpg" alt="설악산 국립공원">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 30분 · 20km</p>
+          <h3 class="attract-card-name">설악산 국립공원</h3>
+          <p class="attract-card-desc">울산바위, 비룡폭포, 신흥사 등 사계절 절경이 펼쳐지는 대한민국 대표 국립공원. 케이블카를 타면 권금성 파노라마 뷰가 압권입니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/lavender2.jpg" alt="척산온천">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 2분 · 1.4km</p>
+          <h3 class="attract-card-name">척산온천휴양촌</h3>
+          <p class="attract-card-desc">알칼리성 단순천으로 피부에 좋은 온천수. 실내 온천풀 수압 마사지부터 실외 가족탕까지, 설악산을 바라보며 여유를 즐길 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/exterior5.jpg" alt="속초해수욕장">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 12분 · 6.5km</p>
+          <h3 class="attract-card-name">속초해수욕장</h3>
+          <p class="attract-card-desc">맑고 투명한 동해 바다와 부드러운 모래사장. 인근에 신선한 해산물 조개구이 전문점과 감성 카페가 즐비합니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/rosemary2.jpg" alt="신흥사">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 11분 · 6.4km</p>
+          <h3 class="attract-card-name">신흥사</h3>
+          <p class="attract-card-desc">1,300년 역사를 지닌 설악산 고찰. 높이 14.6m의 통일대불과 울창한 금강송 숲길이 인상적인 사찰입니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/forsythia2.jpg" alt="아바이마을">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 16분 · 7.8km</p>
+          <h3 class="attract-card-name">아바이마을</h3>
+          <p class="attract-card-desc">한국전쟁 이후 형성된 독특한 문화 공동체. 갯배 체험과 함흥냉면, 오징어순대 등 북방 음식의 현지화된 맛을 즐길 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/portulaca2.jpg" alt="속초 중앙시장">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 16분 · 8.1km</p>
+          <h3 class="attract-card-name">속초 중앙시장</h3>
+          <p class="attract-card-desc">70년 역사의 속초 대표 전통시장. 닭강정, 오징어젓갈, 붉은대게 등 지역 특산물과 활어 회를 저렴하게 즐길 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/iris2.jpg" alt="속초아이 대관람차">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 12분 · 6.5km</p>
+          <h3 class="attract-card-name">속초아이 대관람차</h3>
+          <p class="attract-card-desc">높이 112m의 대형 관람차에서 속초해변과 청초호를 360도로 감상. 야간에는 도심과 바다 야경이 어우러져 SNS 인생샷 명소로 유명합니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/jasmine2.jpg" alt="영금정">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 18분 · 8.9km</p>
+          <h3 class="attract-card-name">영금정</h3>
+          <p class="attract-card-desc">동해안 대표 일출 명소. 바다 위로 돌출된 절벽 위의 정자와 구름다리에서 새벽 일출을 감상하거나 야간 야경을 즐기기에 더없이 좋은 곳입니다.</p>
+        </div>
+      </div>
+
+      <div class="attract-card">
+        <img class="attract-card-img" src="images/azalea2.jpg" alt="청초호">
+        <div class="attract-card-body">
+          <p class="attract-card-dist">차로 약 9분 · 4.7km</p>
+          <h3 class="attract-card-name">청초호</h3>
+          <p class="attract-card-desc">속초 시내 자연 친화적 호수. 둘레길 산책, 요트 마리나, 수상 자전거, 패들보드 등 다양한 액티비티와 철새 관찰을 즐길 수 있습니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────── -->
+<section style="background: var(--primary); padding: 80px 0;">
+  <div class="container text-center">
+    <span class="section-label" style="color: var(--accent);">Ready to Visit?</span>
+    <h2 class="section-title" style="color:var(--white);">올리브 펜션에서<br>특별한 시간을 만들어보세요</h2>
+    <div class="section-divider" style="margin: 0 auto 28px;"></div>
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+      <a href="rooms.html" class="btn btn-white">객실 보기</a>
+      <a href="info.html#reservation" class="btn btn-outline" style="border-color:rgba(255,255,255,.5); color:var(--white);">예약하기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">OLIVE PENSION</a>
+        <p>강원도 속초 설악산 자락의 프라이빗 힐링 스테이.<br>꽃 이름을 가진 9개의 객실에서 자연 속 특별한 휴식을 경험하세요.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">펜션 소개</a></li>
+          <li><a href="rooms.html">객실 안내</a></li>
+          <li><a href="info.html">이용 안내</a></li>
+          <li><a href="contact.html">오시는 길</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">주변 관광지</p>
+        <ul>
+          <li><a href="#">설악산 국립공원</a></li>
+          <li><a href="#">척산온천휴양촌</a></li>
+          <li><a href="#">속초해수욕장</a></li>
+          <li><a href="#">속초 중앙시장</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="#">강원도 속초시 설악동</a></li>
+          <li><a href="tel:">전화 문의</a></li>
+          <li><a href="info.html#reservation">예약 안내</a></li>
+          <li><a href="info.html#refund">환불 규정</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Olive Pension. All Rights Reserved.</span>
+      <span>강원도 속초 설악산 자락 · 올리브 펜션</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+  });
+</script>
+
+</body>
+</html>
