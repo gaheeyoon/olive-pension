@@ -11,7 +11,10 @@
 <!-- ── Navigation ────────────────── -->
 <nav id="navbar" class="transparent">
   <a href="index.html" class="nav-logo">OLIVE PENSION</a>
-  <ul class="nav-links">
+  <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html" class="active">펜션 소개</a></li>
     <li><a href="rooms.html">객실 안내</a></li>
     <li><a href="info.html">이용 안내</a></li>
@@ -371,6 +374,21 @@
 </footer>
 
 <script>
+  // 햄버거 메뉴
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  document.addEventListener('click', e => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }
+  });
+
+  // 스크롤 네비게이션
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
