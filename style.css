@@ -113,7 +113,7 @@ nav.scrolled .nav-links a.btn-reserve { color: var(--white); }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 60%, rgba(0,0,0,.45) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.4) 60%, rgba(0,0,0,.6) 100%);
 }
 .hero-content {
   position: relative;
@@ -521,7 +521,7 @@ footer {
 .page-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(0,0,0,.2) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.38) 100%);
 }
 .page-banner-text {
   position: relative;

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예약하기 — 올리브 펜션</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .booking-wrap {
+      width: 100%;
+    }
+    .booking-wrap iframe {
+      width: 100%;
+      height: 2400px;
+      border: 0;
+      display: block;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ────────────────── -->
+<nav id="navbar" class="scrolled">
+  <a href="index.html" class="nav-logo">OLIVE PENSION</a>
+  <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">펜션 소개</a></li>
+    <li><a href="rooms.html">객실 안내</a></li>
+    <li><a href="info.html">이용 안내</a></li>
+    <li><a href="contact.html">오시는 길</a></li>
+    <li><a href="reservation.html" class="active">예약하기</a></li>
+    <li><a href="https://map.naver.com/p/entry/place/2009569112?lng=128.5402179&lat=38.1828524&placePath=/room?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202605282023&locale=ko&svcName=map_pcv5&businessCategory=pension&searchType=place&c=15.00,0,0,0,dh" class="btn-reserve" target="_blank">네이버 예약</a></li>
+  </ul>
+</nav>
+
+<!-- ── Page Banner ───────────────── -->
+<div class="page-banner" style="margin-top: var(--nav-h);">
+  <img class="page-banner-img" src="images/exterior4.jpg" alt="올리브 펜션">
+  <div class="page-banner-overlay"></div>
+  <div class="page-banner-text">
+    <span class="section-label">Online Reservation</span>
+    <h1>예약하기</h1>
+  </div>
+</div>
+
+<!-- ── Booking iframe ─────────────── -->
+<div class="booking-wrap">
+  <iframe
+    src="https://booking.ddnayo.com/booking-calendar-status?accommodationId=105881&channelCode=0010"
+    title="올리브 펜션 실시간 예약"
+    scrolling="no"
+    loading="lazy"
+  ></iframe>
+</div>
+
+<!-- ── Footer ────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">OLIVE PENSION</a>
+        <p>강원도 속초 설악산 자락의 프라이빗 힐링 스테이.<br>꽃 이름을 가진 9개의 객실에서 자연 속 특별한 휴식을 경험하세요.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">펜션 소개</a></li>
+          <li><a href="rooms.html">객실 안내</a></li>
+          <li><a href="info.html">이용 안내</a></li>
+          <li><a href="contact.html">오시는 길</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Rooms</p>
+        <ul>
+          <li><a href="rooms.html#rosemary">로즈마리</a></li>
+          <li><a href="rooms.html#jasmine">쟈스민</a></li>
+          <li><a href="rooms.html#iris">아이리스</a></li>
+          <li><a href="rooms.html#lavender">라벤다</a></li>
+          <li><a href="rooms.html#other">그 외 객실</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <ul>
+          <li><a href="tel:01046846621">전화 문의</a></li>
+          <li><a href="info.html">예약 안내</a></li>
+          <li><a href="info.html#refund">환불 규정</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Olive Pension. All Rights Reserved.</span>
+      <span>강원 속초시 관광로 250-18 올리브펜션 · 010-4684-6621</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 햄버거 메뉴
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  document.addEventListener('click', e => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    }
+  });
+
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+  });
+</script>
+
+</body>
+</html>
