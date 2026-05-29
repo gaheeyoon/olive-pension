@@ -66,6 +66,31 @@ nav.transparent { background: transparent; }
 }
 nav.scrolled .nav-logo { color: var(--primary); }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.nav-phone-divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,.4);
+  margin: 0 16px;
+  transition: background .3s;
+}
+nav.scrolled .nav-phone-divider { background: var(--border); }
+.nav-phone {
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  transition: color .3s;
+  white-space: nowrap;
+}
+nav.scrolled .nav-phone { color: var(--text-muted); }
+.nav-phone:hover { color: var(--accent) !important; }
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -735,6 +760,7 @@ nav.scrolled .hamburger span { background: var(--text); }
 
   /* 햄버거 메뉴 */
   .hamburger { display: flex; }
+  .nav-phone, .nav-phone-divider { display: none; }
   .nav-links {
     position: fixed;
     top: var(--nav-h);
