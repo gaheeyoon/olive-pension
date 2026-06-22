@@ -527,6 +527,15 @@ footer {
   font-size: 12px;
   opacity: .45;
 }
+.footer-biz {
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  font-size: 11px;
+  color: rgba(255,255,255,.35);
+  line-height: 1.9;
+  text-align: center;
+}
 
 /* ── Page Banner ────────────────────── */
 .page-banner {
